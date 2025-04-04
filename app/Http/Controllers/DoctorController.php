@@ -52,7 +52,7 @@ class DoctorController extends Controller
             return redirect()->back()->with('error', 'Unauthorized action.');
         }
 
-        $appointment->update(['status' => 'Pending']);
+        $appointment->update(['status' => 'Rejected']);
 
         return redirect()->back()->with('success', 'Appointment rejected.');
     }
